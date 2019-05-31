@@ -19,18 +19,18 @@
 			var array=['1.gif', '2.gif', '3.gif', '4.gif'];
 			document.getElementById('imgen').src ='img/'+array[b];
 			function siguiente(){
-			b=b+1;
 			document.getElementById('imgen').src ='img/'+array[b];
-			if (b>=3) {
+			b=b+1;
+			if (b<0 || b>3) {
 				b=0;
 			}
 		}
 		function anterior(){
 			document.getElementById('imgen').src ='img/'+array[b];
-			if (b<=0) {
-				b=4;
-			}
 			b=b-1;
+			if (b<0 || b>3) {
+				b=3;
+			}	
 		}
 
 	</script>
